@@ -1,0 +1,9 @@
+alpine:latest f59abe656b69
+bigdata/spark:3.5.5-hadoop3.3.6 1682565ea549
+bigdata/hive:4.0.1-hadoop3.3.6 770e47107cc6
+bigdata/hbase:2.6.1-hadoop3.3.6 caa689e00157
+bigdata/hadoop:3.3.6 e7092626dd34
+ubuntu:24.04 534baea6a22c
+hello-world:latest 5e2309035332
+mysql:8.0.43 3e646bcda0d9
+bd2023/bigdata:latest 726b206c7658

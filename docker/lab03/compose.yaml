@@ -1,0 +1,63 @@
+name: lab02-student
+
+services:
+  master:
+    image: bigdata/hbase:2.6.1-hadoop3.3.6
+    container_name: master
+    hostname: master
+    ports:
+      - "9870:9870"
+      - "8088:8088"
+      - "8080:8080"
+      - "16010:16010"
+      - "16030:16030"
+      - "10000:10000"
+      - "4040:4040"
+    volumes:
+      - hadoop-master-data:/data/hadoop
+      - hbase-master-data:/data/hbase
+    networks:
+      - hadoopnet
+
+  worker1:
+    image: bigdata/hbase:2.6.1-hadoop3.3.6
+    container_name: worker1
+    hostname: worker1
+    volumes:
+      - hadoop-worker1-data:/data/hadoop
+      - hbase-worker1-data:/data/hbase
+    networks:
+      - hadoopnet
+
+  worker2:
+    image: bigdata/hbase:2.6.1-hadoop3.3.6
+    container_name: worker2
+    hostname: worker2
+    volumes:
+      - hadoop-worker2-data:/data/hadoop
+      - hbase-worker2-data:/data/hbase
+    networks:
+      - hadoopnet
+
+networks:
+  hadoopnet:
+    external: true
+    name: lab02-student_hadoopnet
+
+volumes:
+  hadoop-master-data:
+    external: true
+    name: lab02-student_hadoop-master-data
+  hadoop-worker1-data:
+    external: true
+    name: lab02-student_hadoop-worker1-data
+  hadoop-worker2-data:
+    external: true
+    name: lab02-student_hadoop-worker2-data
+
+  hbase-master-data:
+    name: lab02-student_hbase-master-data
+  hbase-worker1-data:
+    name: lab02-student_hbase-worker1-data
+  hbase-worker2-data:
+    name: lab02-student_hbase-worker2-data

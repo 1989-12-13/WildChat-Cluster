@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://master:9000</value>
+    </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/data/hadoop/tmp</value>
+    </property>
+
+    <!-- HiveServer2 以 root 运行时需要通过 HDFS 代理机制访问文件系统。
+         缺少这两项会报：
+           User: root is not allowed to impersonate root -->
+    <property>
+        <name>hadoop.proxyuser.root.hosts</name>
+        <value>*</value>
+    </property>
+    <property>
+        <name>hadoop.proxyuser.root.groups</name>
+        <value>*</value>
+    </property>
+</configuration>

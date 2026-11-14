@@ -1,0 +1,1311 @@
+[
+    {
+        "Id": "e8c7ca2939d52e7270d0e4c76faa55d5c13b028c3735ca9bae23807754ddbb79",
+        "Created": "2026-11-05T14:03:21.920733147Z",
+        "Path": "/usr/sbin/sshd",
+        "Args": [
+            "-D",
+            "-e"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 255,
+            "Error": "",
+            "StartedAt": "2026-11-09T05:42:53.523312263Z",
+            "FinishedAt": "2026-11-11T07:18:08.343609453Z"
+        },
+        "Image": "sha256:1682565ea5494539b556dc2b538bd75e7984d08ff671cc004da206c81a2fb4e0",
+        "ResolvConfPath": "/var/lib/docker/containers/e8c7ca2939d52e7270d0e4c76faa55d5c13b028c3735ca9bae23807754ddbb79/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/e8c7ca2939d52e7270d0e4c76faa55d5c13b028c3735ca9bae23807754ddbb79/hostname",
+        "HostsPath": "/var/lib/docker/containers/e8c7ca2939d52e7270d0e4c76faa55d5c13b028c3735ca9bae23807754ddbb79/hosts",
+        "LogPath": "/var/lib/docker/containers/e8c7ca2939d52e7270d0e4c76faa55d5c13b028c3735ca9bae23807754ddbb79/e8c7ca2939d52e7270d0e4c76faa55d5c13b028c3735ca9bae23807754ddbb79-json.log",
+        "Name": "/master",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "lab02-student_hadoop-master-data:/data/hadoop:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "lab02-student_hadoopnet",
+            "PortBindings": {
+                "4040/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "4040"
+                    }
+                ],
+                "7077/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "7077"
+                    }
+                ],
+                "8080/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8080"
+                    }
+                ],
+                "8081/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8081"
+                    }
+                ],
+                "8088/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8088"
+                    }
+                ],
+                "9870/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "9870"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "lab02-student_hadoop-master-data",
+                "Source": "/var/lib/docker/volumes/lab02-student_hadoop-master-data/_data",
+                "Destination": "/data/hadoop",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "master",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "10000/tcp": {},
+                "16010/tcp": {},
+                "22/tcp": {},
+                "4040/tcp": {},
+                "7077/tcp": {},
+                "8080/tcp": {},
+                "8081/tcp": {},
+                "8088/tcp": {},
+                "9000/tcp": {},
+                "9870/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/spark/bin:/usr/local/spark/sbin:/usr/local/hadoop/bin:/usr/local/hadoop/sbin:/usr/lib/jvm/java-11-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64",
+                "HADOOP_HOME=/usr/local/hadoop",
+                "HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop",
+                "HADOOP_COMMON_HOME=/usr/local/hadoop",
+                "HADOOP_HDFS_HOME=/usr/local/hadoop",
+                "HADOOP_MAPRED_HOME=/usr/local/hadoop",
+                "HADOOP_YARN_HOME=/usr/local/hadoop",
+                "SPARK_HOME=/usr/local/spark"
+            ],
+            "Cmd": [
+                "/usr/sbin/sshd",
+                "-D",
+                "-e"
+            ],
+            "Image": "bigdata/spark:3.5.5-hadoop3.3.6",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "1f9ce935de8b8c108195f4e4c0c445b0b40843037aeba63da8a4d11477ceb2f1",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:ff903ab9d22d8b7cedd51cae43fb63c8644bcc33244c3210f1b19da7c67c5621",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "lab02-student",
+                "com.docker.compose.project.config_files": "/home/lenovo/lab04/compose.yaml",
+                "com.docker.compose.project.working_dir": "/home/lenovo/lab04",
+                "com.docker.compose.service": "master",
+                "com.docker.compose.version": "5.5.1",
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "lab02-student_hadoopnet": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "master",
+                        "master"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "3f9aff48cc48c96c72895eea408b9550810ff01c7eab5d64633271101c760868",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "master",
+                        "e8c7ca2939d5"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:ff903ab9d22d8b7cedd51cae43fb63c8644bcc33244c3210f1b19da7c67c5621",
+            "size": 1816,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    },
+    {
+        "Id": "90d390a47b903a3346c34a5e1cd0bd8c757ba4c20f05f34fd610ebde026fe8ed",
+        "Created": "2026-11-05T14:03:21.920658267Z",
+        "Path": "/usr/sbin/sshd",
+        "Args": [
+            "-D",
+            "-e"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 255,
+            "Error": "",
+            "StartedAt": "2026-11-09T05:42:52.877462782Z",
+            "FinishedAt": "2026-11-11T07:18:08.34344499Z"
+        },
+        "Image": "sha256:1682565ea5494539b556dc2b538bd75e7984d08ff671cc004da206c81a2fb4e0",
+        "ResolvConfPath": "/var/lib/docker/containers/90d390a47b903a3346c34a5e1cd0bd8c757ba4c20f05f34fd610ebde026fe8ed/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/90d390a47b903a3346c34a5e1cd0bd8c757ba4c20f05f34fd610ebde026fe8ed/hostname",
+        "HostsPath": "/var/lib/docker/containers/90d390a47b903a3346c34a5e1cd0bd8c757ba4c20f05f34fd610ebde026fe8ed/hosts",
+        "LogPath": "/var/lib/docker/containers/90d390a47b903a3346c34a5e1cd0bd8c757ba4c20f05f34fd610ebde026fe8ed/90d390a47b903a3346c34a5e1cd0bd8c757ba4c20f05f34fd610ebde026fe8ed-json.log",
+        "Name": "/worker1",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "lab02-student_hadoop-worker1-data:/data/hadoop:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "lab02-student_hadoopnet",
+            "PortBindings": {
+                "8081/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8082"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "lab02-student_hadoop-worker1-data",
+                "Source": "/var/lib/docker/volumes/lab02-student_hadoop-worker1-data/_data",
+                "Destination": "/data/hadoop",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "worker1",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "10000/tcp": {},
+                "16010/tcp": {},
+                "22/tcp": {},
+                "4040/tcp": {},
+                "7077/tcp": {},
+                "8080/tcp": {},
+                "8081/tcp": {},
+                "8088/tcp": {},
+                "9000/tcp": {},
+                "9870/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/spark/bin:/usr/local/spark/sbin:/usr/local/hadoop/bin:/usr/local/hadoop/sbin:/usr/lib/jvm/java-11-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64",
+                "HADOOP_HOME=/usr/local/hadoop",
+                "HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop",
+                "HADOOP_COMMON_HOME=/usr/local/hadoop",
+                "HADOOP_HDFS_HOME=/usr/local/hadoop",
+                "HADOOP_MAPRED_HOME=/usr/local/hadoop",
+                "HADOOP_YARN_HOME=/usr/local/hadoop",
+                "SPARK_HOME=/usr/local/spark"
+            ],
+            "Cmd": [
+                "/usr/sbin/sshd",
+                "-D",
+                "-e"
+            ],
+            "Image": "bigdata/spark:3.5.5-hadoop3.3.6",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "b6d4c19bab6620888ed76fee73b944364bc6c16c135e44867b338931fd4b4504",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:ff903ab9d22d8b7cedd51cae43fb63c8644bcc33244c3210f1b19da7c67c5621",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "lab02-student",
+                "com.docker.compose.project.config_files": "/home/lenovo/lab04/compose.yaml",
+                "com.docker.compose.project.working_dir": "/home/lenovo/lab04",
+                "com.docker.compose.service": "worker1",
+                "com.docker.compose.version": "5.5.1",
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "lab02-student_hadoopnet": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "worker1",
+                        "worker1"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "3f9aff48cc48c96c72895eea408b9550810ff01c7eab5d64633271101c760868",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "worker1",
+                        "90d390a47b90"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:ff903ab9d22d8b7cedd51cae43fb63c8644bcc33244c3210f1b19da7c67c5621",
+            "size": 1816,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    },
+    {
+        "Id": "eacca0398f3d47258c7a984ff680c19050869726c8c8f0720c19672cfc96332b",
+        "Created": "2026-11-05T14:03:21.920748824Z",
+        "Path": "/usr/sbin/sshd",
+        "Args": [
+            "-D",
+            "-e"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 255,
+            "Error": "",
+            "StartedAt": "2026-11-09T05:42:51.785061871Z",
+            "FinishedAt": "2026-11-11T07:18:08.348328202Z"
+        },
+        "Image": "sha256:1682565ea5494539b556dc2b538bd75e7984d08ff671cc004da206c81a2fb4e0",
+        "ResolvConfPath": "/var/lib/docker/containers/eacca0398f3d47258c7a984ff680c19050869726c8c8f0720c19672cfc96332b/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/eacca0398f3d47258c7a984ff680c19050869726c8c8f0720c19672cfc96332b/hostname",
+        "HostsPath": "/var/lib/docker/containers/eacca0398f3d47258c7a984ff680c19050869726c8c8f0720c19672cfc96332b/hosts",
+        "LogPath": "/var/lib/docker/containers/eacca0398f3d47258c7a984ff680c19050869726c8c8f0720c19672cfc96332b/eacca0398f3d47258c7a984ff680c19050869726c8c8f0720c19672cfc96332b-json.log",
+        "Name": "/worker2",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "lab02-student_hadoop-worker2-data:/data/hadoop:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "lab02-student_hadoopnet",
+            "PortBindings": {
+                "8081/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8083"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "lab02-student_hadoop-worker2-data",
+                "Source": "/var/lib/docker/volumes/lab02-student_hadoop-worker2-data/_data",
+                "Destination": "/data/hadoop",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "worker2",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "10000/tcp": {},
+                "16010/tcp": {},
+                "22/tcp": {},
+                "4040/tcp": {},
+                "7077/tcp": {},
+                "8080/tcp": {},
+                "8081/tcp": {},
+                "8088/tcp": {},
+                "9000/tcp": {},
+                "9870/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/spark/bin:/usr/local/spark/sbin:/usr/local/hadoop/bin:/usr/local/hadoop/sbin:/usr/lib/jvm/java-11-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64",
+                "HADOOP_HOME=/usr/local/hadoop",
+                "HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop",
+                "HADOOP_COMMON_HOME=/usr/local/hadoop",
+                "HADOOP_HDFS_HOME=/usr/local/hadoop",
+                "HADOOP_MAPRED_HOME=/usr/local/hadoop",
+                "HADOOP_YARN_HOME=/usr/local/hadoop",
+                "SPARK_HOME=/usr/local/spark"
+            ],
+            "Cmd": [
+                "/usr/sbin/sshd",
+                "-D",
+                "-e"
+            ],
+            "Image": "bigdata/spark:3.5.5-hadoop3.3.6",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "092d8b4c71e66f7575e09287d2698b2f0bffbf90f289850e19197610076eb498",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:ff903ab9d22d8b7cedd51cae43fb63c8644bcc33244c3210f1b19da7c67c5621",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "lab02-student",
+                "com.docker.compose.project.config_files": "/home/lenovo/lab04/compose.yaml",
+                "com.docker.compose.project.working_dir": "/home/lenovo/lab04",
+                "com.docker.compose.service": "worker2",
+                "com.docker.compose.version": "5.5.1",
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "lab02-student_hadoopnet": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "worker2",
+                        "worker2"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "3f9aff48cc48c96c72895eea408b9550810ff01c7eab5d64633271101c760868",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "worker2",
+                        "eacca0398f3d"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:ff903ab9d22d8b7cedd51cae43fb63c8644bcc33244c3210f1b19da7c67c5621",
+            "size": 1816,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    },
+    {
+        "Id": "e7926c47d0fc9f69d8b3fbdd59ee60cf41ccb60151a8bfe3bb645441c118203d",
+        "Created": "2026-11-07T12:47:20.157145389Z",
+        "Path": "/usr/sbin/sshd",
+        "Args": [
+            "-D",
+            "-e"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 255,
+            "Error": "",
+            "StartedAt": "2026-11-09T05:28:11.80480683Z",
+            "FinishedAt": "2026-11-09T05:33:15.441544249Z"
+        },
+        "Image": "sha256:770e47107cc683a62167c1bb36e44b2a44ce9ec37ed5cfc468c4f08bef70f17b",
+        "ResolvConfPath": "/var/lib/docker/containers/e7926c47d0fc9f69d8b3fbdd59ee60cf41ccb60151a8bfe3bb645441c118203d/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/e7926c47d0fc9f69d8b3fbdd59ee60cf41ccb60151a8bfe3bb645441c118203d/hostname",
+        "HostsPath": "/var/lib/docker/containers/e7926c47d0fc9f69d8b3fbdd59ee60cf41ccb60151a8bfe3bb645441c118203d/hosts",
+        "LogPath": "/var/lib/docker/containers/e7926c47d0fc9f69d8b3fbdd59ee60cf41ccb60151a8bfe3bb645441c118203d/e7926c47d0fc9f69d8b3fbdd59ee60cf41ccb60151a8bfe3bb645441c118203d-json.log",
+        "Name": "/hive",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "lab03-hive-logs:/usr/local/hive/logs:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "lab02-student_hadoopnet",
+            "PortBindings": {
+                "10000/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "10001"
+                    }
+                ],
+                "10002/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "10002"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "lab03-hive-logs",
+                "Source": "/var/lib/docker/volumes/lab03-hive-logs/_data",
+                "Destination": "/usr/local/hive/logs",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "hive",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "10000/tcp": {},
+                "10002/tcp": {},
+                "16010/tcp": {},
+                "22/tcp": {},
+                "4040/tcp": {},
+                "8080/tcp": {},
+                "8088/tcp": {},
+                "9000/tcp": {},
+                "9083/tcp": {},
+                "9870/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/hive/bin:/usr/local/hadoop/bin:/usr/local/hadoop/sbin:/usr/lib/jvm/java-11-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64",
+                "HADOOP_HOME=/usr/local/hadoop",
+                "HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop",
+                "HADOOP_COMMON_HOME=/usr/local/hadoop",
+                "HADOOP_HDFS_HOME=/usr/local/hadoop",
+                "HADOOP_MAPRED_HOME=/usr/local/hadoop",
+                "HADOOP_YARN_HOME=/usr/local/hadoop",
+                "HIVE_HOME=/usr/local/hive",
+                "HIVE_CONF_DIR=/usr/local/hive/conf"
+            ],
+            "Cmd": [
+                "/usr/sbin/sshd",
+                "-D",
+                "-e"
+            ],
+            "Image": "bigdata/hive:4.0.1-hadoop3.3.6",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "82d54c2a55dd4352c4f2297326756e0b95e1f3a26000f6a07e4ee703ecd6a20c",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "hive-mysql:service_healthy:false",
+                "com.docker.compose.image": "sha256:78febb81174fe19416a53b69a630a1a393a2f516622fb8c84d36eff819a29f00",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "lab03-hive",
+                "com.docker.compose.project.config_files": "/home/lenovo/lab03/compose-hive.yaml",
+                "com.docker.compose.project.working_dir": "/home/lenovo/lab03",
+                "com.docker.compose.service": "hive",
+                "com.docker.compose.version": "5.5.1",
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "lab02-student_hadoopnet": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "hive",
+                        "hive"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "3f9aff48cc48c96c72895eea408b9550810ff01c7eab5d64633271101c760868",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "hive",
+                        "e7926c47d0fc"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:78febb81174fe19416a53b69a630a1a393a2f516622fb8c84d36eff819a29f00",
+            "size": 1632,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    },
+    {
+        "Id": "5ee68ffa21d49a31f42fb064e5fbf9b128de80db8bd787228d8e942d4df76a4c",
+        "Created": "2026-11-07T12:47:20.021893666Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "--character-set-server=utf8mb4",
+            "--collation-server=utf8mb4_unicode_ci",
+            "--innodb-buffer-pool-size=128M",
+            "--performance-schema=OFF"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 255,
+            "Error": "",
+            "StartedAt": "2026-11-09T05:28:03.109310086Z",
+            "FinishedAt": "2026-11-09T05:33:15.441544149Z",
+            "Health": {
+                "Status": "starting",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:3e646bcda0d9448ffa3d2024eef04e1bca95528ec19b9e8b76749da9d97d4a10",
+        "ResolvConfPath": "/var/lib/docker/containers/5ee68ffa21d49a31f42fb064e5fbf9b128de80db8bd787228d8e942d4df76a4c/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/5ee68ffa21d49a31f42fb064e5fbf9b128de80db8bd787228d8e942d4df76a4c/hostname",
+        "HostsPath": "/var/lib/docker/containers/5ee68ffa21d49a31f42fb064e5fbf9b128de80db8bd787228d8e942d4df76a4c/hosts",
+        "LogPath": "/var/lib/docker/containers/5ee68ffa21d49a31f42fb064e5fbf9b128de80db8bd787228d8e942d4df76a4c/5ee68ffa21d49a31f42fb064e5fbf9b128de80db8bd787228d8e942d4df76a4c-json.log",
+        "Name": "/hive-mysql",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "lab03-hive-metastore-data:/var/lib/mysql:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "lab02-student_hadoopnet",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "lab03-hive-metastore-data",
+                "Source": "/var/lib/docker/volumes/lab03-hive-metastore-data/_data",
+                "Destination": "/var/lib/mysql",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "hive-mysql",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "3306/tcp": {},
+                "33060/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "MYSQL_USER=hive",
+                "MYSQL_PASSWORD=HiveMeta123!",
+                "TZ=Asia/Shanghai",
+                "MYSQL_ROOT_PASSWORD=RootMeta123!",
+                "MYSQL_DATABASE=hive_metastore",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.19",
+                "MYSQL_MAJOR=8.0",
+                "MYSQL_VERSION=8.0.43-1.el9",
+                "MYSQL_SHELL_VERSION=8.0.43-1.el9"
+            ],
+            "Cmd": [
+                "--character-set-server=utf8mb4",
+                "--collation-server=utf8mb4_unicode_ci",
+                "--innodb-buffer-pool-size=128M",
+                "--performance-schema=OFF"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "mysqladmin ping -h 127.0.0.1 -uroot -p${MYSQL_ROOT_PASSWORD} --silent"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 5000000000,
+                "StartPeriod": 20000000000,
+                "Retries": 30
+            },
+            "Image": "mysql:8.0.43",
+            "Volumes": {
+                "/var/lib/mysql": {}
+            },
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "c9a797d4e4a4b15bc3a40a1b6bb474b11afe2a53e70f77f6a973867abe6dc940",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:902368b688a8aba1d9de3f59110e4b3cb1a5ea76d370c1c29fa64f724a110cad",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "lab03-hive",
+                "com.docker.compose.project.config_files": "/home/lenovo/lab03/compose-hive.yaml",
+                "com.docker.compose.project.working_dir": "/home/lenovo/lab03",
+                "com.docker.compose.service": "hive-mysql",
+                "com.docker.compose.version": "5.5.1"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "lab02-student_hadoopnet": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "hive-mysql",
+                        "hive-mysql"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "3f9aff48cc48c96c72895eea408b9550810ff01c7eab5d64633271101c760868",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "hive-mysql",
+                        "5ee68ffa21d4"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:902368b688a8aba1d9de3f59110e4b3cb1a5ea76d370c1c29fa64f724a110cad",
+            "size": 3045,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "amd64",
+                "org.opencontainers.image.base.digest": "sha256:392fbf987450218dd56c56b5edf64a6c28cced9339bd861ad58577c336e6a7c5",
+                "org.opencontainers.image.base.name": "oraclelinux:9-slim",
+                "org.opencontainers.image.created": "2025-10-18T00:10:42Z",
+                "org.opencontainers.image.revision": "7a5e9fbb739c7d423437b8687dfd400ea84fdb20",
+                "org.opencontainers.image.source": "https://github.com/docker-library/mysql.git#7a5e9fbb739c7d423437b8687dfd400ea84fdb20:8.0",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/mysql",
+                "org.opencontainers.image.version": "8.0.43"
+            },
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

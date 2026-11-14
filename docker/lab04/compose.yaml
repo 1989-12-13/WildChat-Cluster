@@ -1,0 +1,56 @@
+name: lab02-student
+
+services:
+  master:
+    image: bigdata/spark:3.5.5-hadoop3.3.6
+    container_name: master
+    hostname: master
+    ports:
+      - "9870:9870"
+      - "8088:8088"
+      - "7077:7077"
+      - "8080:8080"
+      - "4040:4040"
+      - "8081:8081"
+    volumes:
+      - hadoop-master-data:/data/hadoop
+    networks:
+      - hadoopnet
+
+  worker1:
+    image: bigdata/spark:3.5.5-hadoop3.3.6
+    container_name: worker1
+    hostname: worker1
+    ports:
+      - "8082:8081"
+    volumes:
+      - hadoop-worker1-data:/data/hadoop
+    networks:
+      - hadoopnet
+
+  worker2:
+    image: bigdata/spark:3.5.5-hadoop3.3.6
+    container_name: worker2
+    hostname: worker2
+    ports:
+      - "8083:8081"
+    volumes:
+      - hadoop-worker2-data:/data/hadoop
+    networks:
+      - hadoopnet
+
+networks:
+  hadoopnet:
+    external: true
+    name: lab02-student_hadoopnet
+
+volumes:
+  hadoop-master-data:
+    external: true
+    name: lab02-student_hadoop-master-data
+  hadoop-worker1-data:
+    external: true
+    name: lab02-student_hadoop-worker1-data
+  hadoop-worker2-data:
+    external: true
+    name: lab02-student_hadoop-worker2-data

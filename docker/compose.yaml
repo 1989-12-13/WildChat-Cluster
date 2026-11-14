@@ -1,0 +1,61 @@
+# WildChat 聚类项目 —— 三节点 Hadoop + Spark 集群
+#
+# 照 lab02-student/compose.yaml 与 lab04/compose.yaml 改写。
+# 改动仅限：
+#   1. 单一镜像 bigdata/spark（实验服务器 上没有单独的 hadoop 镜像，
+#      该镜像同时含 Hadoop 3.3.6 与 Spark 3.5.9）
+#   2. 端口避让宿主机已占用（9870/8088/7077/8080/8081 均被占）
+#   3. 内存/CPU 配额（课程默认 512MB/1核，跑不动 19GB 向量）
+#   4. master 挂载 ./shared 用于把宿主机向量送入 HDFS
+#
+name: lab02-student
+
+services:
+  master:
+    image: bigdata/spark:3.5.5-hadoop3.3.6
+    container_name: master
+    hostname: master
+    ports:
+      - "19870:9870"
+      - "19088:8088"
+      - "19077:7077"
+      - "19080:8080"
+      - "19040:4040"
+    volumes:
+      - hadoop-master-data:/data/hadoop
+      - ./shared:/shared
+    networks:
+      - hadoopnet
+    mem_limit: 8g
+    cpus: 8
+
+  worker1:
+    image: bigdata/spark:3.5.5-hadoop3.3.6
+    container_name: worker1
+    hostname: worker1
+    volumes:
+      - hadoop-worker1-data:/data/hadoop
+    networks:
+      - hadoopnet
+    mem_limit: 12g
+    cpus: 12
+
+  worker2:
+    image: bigdata/spark:3.5.5-hadoop3.3.6
+    container_name: worker2
+    hostname: worker2
+    volumes:
+      - hadoop-worker2-data:/data/hadoop
+    networks:
+      - hadoopnet
+    mem_limit: 12g
+    cpus: 12
+
+networks:
+  hadoopnet:
+    driver: bridge
+
+volumes:
+  hadoop-master-data:
+  hadoop-worker1-data:
+  hadoop-worker2-data:

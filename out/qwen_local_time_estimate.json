@@ -1,0 +1,94 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU (8 GB, 24 SM, bf16)",
+  "model": "Qwen/Qwen3-Embedding-0.6B (595.8M params, 1.11 GB VRAM)",
+  "method": "measured length->throughput curve x real 21k stratified token distribution",
+  "verification": "diag_batch_scaling.py confirms ~4096 tokens/batch is the optimal operating point on this GPU; >16k tokens/batch collapses / OOMs",
+  "measured_curve_L_tok_per_s": [
+    [
+      64.0,
+      13065.0
+    ],
+    [
+      256.0,
+      9895.0
+    ],
+    [
+      512.0,
+      8017.0
+    ],
+    [
+      1024.0,
+      5724.0
+    ],
+    [
+      2048.0,
+      3364.0
+    ],
+    [
+      4096.0,
+      1939.0
+    ]
+  ],
+  "cap": 8192,
+  "sample_rows": 21000,
+  "full_rows": 831237,
+  "scale": 39.58,
+  "baseline_gpu_hours": 26.6,
+  "baseline_wallclock_hours_15pct_io": 30.59,
+  "range": {
+    "optimistic_+20pct": {
+      "gpu_hours": 22.17,
+      "gpu_minutes": 1330.0,
+      "wallclock_hours_with_15pct_io": 25.49
+    },
+    "baseline_measured": {
+      "gpu_hours": 26.6,
+      "gpu_minutes": 1596.0,
+      "wallclock_hours_with_15pct_io": 30.59
+    },
+    "pessimistic_-20pct": {
+      "gpu_hours": 33.25,
+      "gpu_minutes": 1995.0,
+      "wallclock_hours_with_15pct_io": 38.24
+    }
+  },
+  "time_breakdown_by_length": [
+    {
+      "bucket": "<=128",
+      "rows_pct": 64.79,
+      "time_pct": 1.49
+    },
+    {
+      "bucket": "129-512",
+      "rows_pct": 14.27,
+      "time_pct": 3.38
+    },
+    {
+      "bucket": "513-1024",
+      "rows_pct": 14.34,
+      "time_pct": 13.86
+    },
+    {
+      "bucket": "1025-2048",
+      "rows_pct": 3.17,
+      "time_pct": 9.18
+    },
+    {
+      "bucket": "2049-4096",
+      "rows_pct": 2.52,
+      "time_pct": 26.8
+    },
+    {
+      "bucket": "4097-8192",
+      "rows_pct": 0.48,
+      "time_pct": 17.72
+    },
+    {
+      "bucket": ">8192(capped)",
+      "rows_pct": 0.43,
+      "time_pct": 27.57
+    }
+  ],
+  "cpu_tokenize_full_minutes": 101.9,
+  "note": "CPU tokenization overlaps GPU via prefetch; not additive to wall clock."
+}

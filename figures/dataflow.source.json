@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "WildChat 聚类分析数据流",
+    "locale": "zh-CN",
+    "output": "wildchat-dataflow.html",
+    "quality_profile": "showcase"
+  },
+  "stages": [
+    { "label": "数据采集" },
+    { "label": "向量化" },
+    { "label": "分布式存储" },
+    { "label": "降维与聚类" },
+    { "label": "分析与产出" }
+  ],
+  "nodes": [
+    { "id": "wildchat", "type": "external", "label": "WildChat-1M", "sublabel": "837,989 场对话", "stage": 0, "row": 0, "tag": "公开数据集" },
+    { "id": "turns", "type": "backend", "label": "用户轮次抽取", "sublabel": "role=user", "stage": 0, "row": 2, "tag": "1,943,027 条" },
+    { "id": "truncate", "type": "backend", "label": "清洗与截断", "sublabel": "8192 tokens 右侧", "stage": 1, "row": 0, "tag": "token_len" },
+    { "id": "embed", "type": "backend", "label": "Qwen3-Embedding-4B", "sublabel": "last token 池化", "stage": 1, "row": 2, "tag": "2560 维" },
+    { "id": "shards", "type": "database", "label": "parquet 分块", "sublabel": "39 个文件，zstd", "stage": 2, "row": 0, "tag": "17 GB" },
+    { "id": "hdfs", "type": "database", "label": "HDFS", "sublabel": "/wildchat/ods", "stage": 2, "row": 2, "tag": "副本 2" },
+    { "id": "pca", "type": "backend", "label": "PCA 降维", "sublabel": "逐步累加 Gram 矩阵", "stage": 3, "row": 0, "tag": "2560 到 64" },
+    { "id": "kmeans", "type": "backend", "label": "KMeans 聚类", "sublabel": "k=7，YARN 执行", "stage": 3, "row": 2, "tag": "轮廓系数 0.0779" },
+    { "id": "ctfidf", "type": "backend", "label": "c-TF-IDF", "sublabel": "逐文档归一化", "stage": 4, "row": 0, "tag": "高频词" },
+    { "id": "llm", "type": "external", "label": "LLM 标注", "sublabel": "50 正例与 50 反例", "stage": 4, "row": 2, "tag": "簇名" }
+  ],
+  "flows": [
+    { "id": "dataset-turns", "from": "wildchat", "to": "turns", "label": "对话记录", "classification": "原始输入", "variant": "emphasis" },
+    { "id": "turns-truncate", "from": "turns", "to": "truncate", "label": "待清洗文本", "classification": "预处理", "variant": "default" },
+    { "id": "truncate-embed", "from": "truncate", "to": "embed", "label": "截断后文本", "classification": "模型输入", "variant": "emphasis" },
+    { "id": "embed-shards", "from": "embed", "to": "shards", "label": "float32 向量", "classification": "向量落盘", "variant": "emphasis" },
+    { "id": "shards-hdfs", "from": "shards", "to": "hdfs", "label": "put 上传", "classification": "入分布式存储", "variant": "emphasis" },
+    { "id": "hdfs-pca", "from": "hdfs", "to": "pca", "label": "64 MB 分区", "classification": "不缓存原始向量", "variant": "default" },
+    { "id": "pca-kmeans", "from": "pca", "to": "kmeans", "label": "64 维向量", "classification": "缓存 0.93 GB", "variant": "emphasis" },
+    { "id": "kmeans-ctfidf", "from": "kmeans", "to": "ctfidf", "label": "簇标签", "classification": "关联原文分词", "variant": "default" },
+    { "id": "kmeans-llm", "from": "kmeans", "to": "llm", "label": "簇内与反例样本", "classification": "质心距离排序", "variant": "default" },
+    { "id": "ctfidf-llm", "from": "ctfidf", "to": "llm", "label": "高频词", "classification": "交叉验证", "variant": "dashed" }
+  ],
+  "cards": []
+}

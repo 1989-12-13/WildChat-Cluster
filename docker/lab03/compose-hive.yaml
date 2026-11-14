@@ -1,0 +1,56 @@
+name: lab03-hive
+
+services:
+  hive-mysql:
+    image: mysql:8.0.43
+    container_name: hive-mysql
+    hostname: hive-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: RootMeta123!
+      MYSQL_DATABASE: hive_metastore
+      MYSQL_USER: hive
+      MYSQL_PASSWORD: HiveMeta123!
+      TZ: Asia/Shanghai
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --innodb-buffer-pool-size=128M
+      - --performance-schema=OFF
+    volumes:
+      - hive-metastore-data:/var/lib/mysql
+    networks:
+      - hadoopnet
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - mysqladmin ping -h 127.0.0.1 -uroot -p$${MYSQL_ROOT_PASSWORD} --silent
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
+
+  hive:
+    image: bigdata/hive:4.0.1-hadoop3.3.6
+    container_name: hive
+    hostname: hive
+    depends_on:
+      hive-mysql:
+        condition: service_healthy
+    ports:
+      - "10001:10000"
+      - "10002:10002"
+    volumes:
+      - hive-logs:/usr/local/hive/logs
+    networks:
+      - hadoopnet
+
+networks:
+  hadoopnet:
+    external: true
+    name: lab02-student_hadoopnet
+
+volumes:
+  hive-metastore-data:
+    name: lab03-hive-metastore-data
+  hive-logs:
+    name: lab03-hive-logs

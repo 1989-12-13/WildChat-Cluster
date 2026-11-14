@@ -1,0 +1,5 @@
+hive bigdata/hive:4.0.1-hadoop3.3.6 Exited (255) 5 days ago
+hive-mysql mysql:8.0.43 Exited (255) 5 days ago
+worker2 bigdata/spark:3.5.5-hadoop3.3.6 Exited (255) 3 days ago
+master bigdata/spark:3.5.5-hadoop3.3.6 Exited (255) 3 days ago
+worker1 bigdata/spark:3.5.5-hadoop3.3.6 Exited (255) 3 days ago

@@ -1,0 +1,65 @@
+# Hive 服务（照 lab03/compose-hive.yaml 改写）
+#
+# 改动仅限：
+#   1. 镜像名不变（实验服务器 上自建同名镜像）
+#   2. 网络名沿用 lab02-student_hadoopnet（已在 实验服务器 上创建）
+#   3. 端口避让宿主机占用（10001 被占，改用 20001）
+#
+name: lab03-hive
+
+services:
+  hive-mysql:
+    image: mysql:8.0.43
+    container_name: hive-mysql
+    hostname: hive-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: RootMeta123!
+      MYSQL_DATABASE: hive_metastore
+      MYSQL_USER: hive
+      MYSQL_PASSWORD: HiveMeta123!
+      TZ: Asia/Shanghai
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --innodb-buffer-pool-size=128M
+      - --performance-schema=OFF
+    volumes:
+      - hive-metastore-data:/var/lib/mysql
+    networks:
+      - hadoopnet
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - mysqladmin ping -h 127.0.0.1 -uroot -p$${MYSQL_ROOT_PASSWORD} --silent
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
+    mem_limit: 2g
+
+  hive:
+    image: bigdata/hive:4.0.1-hadoop3.3.6
+    container_name: hive
+    hostname: hive
+    depends_on:
+      hive-mysql:
+        condition: service_healthy
+    ports:
+      - "20001:10000"
+      - "20002:10002"
+    volumes:
+      - hive-logs:/usr/local/hive/logs
+    networks:
+      - hadoopnet
+    mem_limit: 6g
+
+networks:
+  hadoopnet:
+    external: true
+    name: lab02-student_hadoopnet
+
+volumes:
+  hive-metastore-data:
+    name: lab03-hive-metastore-data
+  hive-logs:
+    name: lab03-hive-logs

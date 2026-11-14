@@ -1,0 +1,20 @@
+{
+  "sample_rows": 21000,
+  "sample_chars": 33016969,
+  "sample_qwen_tokens": 8461917,
+  "sample_xlmr_tokens": 8470083,
+  "qwen_tokens_per_char": 0.2563,
+  "mean_qwen_tokens_per_row": 402.9,
+  "sample_over_8192_rate": 0.00433,
+  "full_valid_rows": 831237,
+  "full_chars_estimate": 1325656767,
+  "full_qwen_tokens_by_row": 334945642,
+  "full_qwen_tokens_by_chars": 339752493,
+  "chosen_full_qwen_tokens": 337349068,
+  "price_sync_cny_per_1k": 0.0005,
+  "price_batch_cny_per_1k": 0.00025,
+  "free_quota_tokens": 1000000,
+  "cost_sync_cny": 168.67,
+  "cost_batch_cny": 84.34,
+  "est_rows_over_8192": 3602
+}

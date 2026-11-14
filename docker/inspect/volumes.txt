@@ -1,0 +1,8 @@
+lab02-student_hadoop-master-data
+lab02-student_hadoop-worker1-data
+lab02-student_hadoop-worker2-data
+lab02-student_hbase-master-data
+lab02-student_hbase-worker1-data
+lab02-student_hbase-worker2-data
+lab03-hive-logs
+lab03-hive-metastore-data

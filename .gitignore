@@ -1,0 +1,26 @@
+# 原始数据与模型，体积过大，按 README 的说明自行下载
+data/
+models/
+cache/
+
+# 过程脚本，含本机路径，不公开
+scripts/archive/
+
+# Python 运行缓存
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# 图表与幻灯片的生成中间件
+.archify/
+_shot*.png
+_flow*.html
+*.tmp
+
+# 系统与编辑器
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
