@@ -1,7 +1,11 @@
 import theme  # noqa: F401  统一图表配色
+import os
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+FIG = os.path.join(HERE, "..", "figures")
 
 matplotlib.rcParams["font.sans-serif"] = ["Microsoft YaHei", "SimHei", "DejaVu Sans"]
 matplotlib.rcParams["axes.unicode_minus"] = False
@@ -50,6 +54,6 @@ ax.set_aspect("equal")
 ax.set_xlim(-1.32, 1.28)
 ax.set_ylim(-1.12, 1.34)
 plt.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.01)
-plt.savefig("figures/cluster_share_pie.png",
+plt.savefig(os.path.join(FIG, "cluster_share_pie.png"),
             dpi=200, facecolor="#FAF7F2", bbox_inches="tight", pad_inches=0.06)
 print("saved")

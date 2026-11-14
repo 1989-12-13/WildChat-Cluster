@@ -1,13 +1,18 @@
 import theme  # noqa: F401  统一图表配色
+import os
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+FIG = os.path.join(HERE, "..", "figures")
+DATA = os.path.join(HERE, "..", "out")
+
 matplotlib.rcParams["font.sans-serif"] = ["Microsoft YaHei", "SimHei", "DejaVu Sans"]
 matplotlib.rcParams["axes.unicode_minus"] = False
 
-raw = pd.read_csv("scripts/archive/scatter_k7.csv",
+raw = pd.read_csv(os.path.join(DATA, "scatter_k7.csv"),
                   dtype=str)
 # getmerge 会把每个分区的表头一起拼进来，需要剔除
 raw = raw[raw["item_id"] != "item_id"]
@@ -84,6 +89,6 @@ ax3.grid(alpha=0.22, ls="--")
 ax3.set_xlim(-0.65, 0.75)
 ax3.set_ylim(-0.55, 0.85)
 
-plt.savefig("figures/scatter_k7.png",
+plt.savefig(os.path.join(FIG, "scatter_k7.png"),
             dpi=150, bbox_inches="tight")
 print("saved")

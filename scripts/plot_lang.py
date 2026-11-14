@@ -1,7 +1,11 @@
 import theme  # noqa: F401  统一图表配色
+import os
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+FIG = os.path.join(HERE, "..", "figures")
 
 matplotlib.rcParams["font.sans-serif"] = ["Microsoft YaHei", "SimHei", "DejaVu Sans"]
 matplotlib.rcParams["axes.unicode_minus"] = False
@@ -82,6 +86,6 @@ ax2.annotate("簇4 几乎纯中文\n（熵最低的非单语簇）",
              arrowprops=dict(arrowstyle="->", lw=1.1))
 
 plt.tight_layout()
-plt.savefig("figures/lang_topic_k7.png",
+plt.savefig(os.path.join(FIG, "lang_topic_k7.png"),
             dpi=155, bbox_inches="tight")
 print("saved")

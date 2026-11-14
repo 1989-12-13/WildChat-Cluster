@@ -1,7 +1,11 @@
 import theme  # noqa: F401  统一图表配色
+import os
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+FIG = os.path.join(HERE, "..", "figures")
 
 matplotlib.rcParams["font.sans-serif"] = ["Microsoft YaHei", "SimHei", "DejaVu Sans"]
 matplotlib.rcParams["axes.unicode_minus"] = False
@@ -74,6 +78,6 @@ ax2.set_ylim(-2, 46)
 ax2.set_xticks(x)
 ax2.set_xticklabels([m[2:] for m in months], rotation=45, fontsize=9)
 
-plt.savefig("figures/topic_over_time_k7.png",
+plt.savefig(os.path.join(FIG, "topic_over_time_k7.png"),
             dpi=160, bbox_inches="tight")
 print("saved")

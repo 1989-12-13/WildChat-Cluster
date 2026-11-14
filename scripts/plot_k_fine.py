@@ -1,7 +1,11 @@
 import theme  # noqa: F401  统一图表配色
+import os
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+FIG = os.path.join(HERE, "..", "figures")
 
 matplotlib.rcParams["font.sans-serif"] = ["Microsoft YaHei", "SimHei", "DejaVu Sans"]
 matplotlib.rcParams["axes.unicode_minus"] = False
@@ -70,6 +74,6 @@ for a in axes:
     a.tick_params(labelsize=10)
 
 plt.tight_layout()
-plt.savefig("figures/k_scan_fine.png",
+plt.savefig(os.path.join(FIG, "k_scan_fine.png"),
             dpi=160, bbox_inches="tight")
 print("saved")
